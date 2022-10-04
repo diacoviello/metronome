@@ -7,7 +7,8 @@
 
 body {
     font-family: "Almendra", sans-serif;
-    color:blue
+    color:blue;
+    user-select: none;
 }
 .container {
     display: flex;
