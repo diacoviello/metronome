@@ -1,14 +1,20 @@
 import Timer from './timer.js';
 
-const tempoDisplay = document.querySelector('.tempo');
-const tempoText = document.querySelector('.tempo-text');
-const decreaseTempoBtn = document.querySelector('.decrease-tempo');
-const increaseTempoBtn = document.querySelector('.increase-tempo');
-const tempoSlider = document.querySelector('.slider');
-const startStopBtn = document.querySelector('.start-stop');
-const subtractBeats = document.querySelector('.subtract-beats');
-const addBeats = document.querySelector('.add-beats');
-const measureCount = document.querySelector('.measure-count');
+if (typeof window !== 'undefined') {
+  console.log('You are on the browser')
+} else {
+  console.log('You are on the server')
+}
+
+const tempoDisplay = window.document.querySelector('.tempo');
+const tempoText = window.document.querySelector('.tempo-text');
+const decreaseTempoBtn = window.document.querySelector('.decrease-tempo');
+const increaseTempoBtn = window.document.querySelector('.increase-tempo');
+const tempoSlider = window.document.querySelector('.slider');
+const startStopBtn = window.document.querySelector('.start-stop');
+const subtractBeats = window.document.querySelector('.subtract-beats');
+const addBeats = window.document.querySelector('.add-beats');
+const measureCount = window.document.querySelector('.measure-count');
 
 const click1 = new Audio('metronome-click-high.mp3');
 const click2 = new Audio('metronome-click-low.mp3');
