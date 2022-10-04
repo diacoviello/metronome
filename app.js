@@ -2,44 +2,97 @@ import Timer from './timer.js';
 
 if (typeof window !== 'undefined') {
   console.log('You are on the browser')
-} else {
-  console.log('You are on the server')
-}
+    } else {
+        console.log('You are on the server')
+    }
 
-const tempoDisplay = window.document.querySelector('.tempo');
-const tempoText = window.document.querySelector('.tempo-text');
-const decreaseTempoBtn = window.document.querySelector('.decrease-tempo');
-const increaseTempoBtn = window.document.querySelector('.increase-tempo');
-const tempoSlider = window.document.querySelector('.slider');
-const startStopBtn = window.document.querySelector('.start-stop');
-const subtractBeats = window.document.querySelector('.subtract-beats');
-const addBeats = window.document.querySelector('.add-beats');
-const measureCount = window.document.querySelector('.measure-count');
+const tempoDisplay = document.querySelector('.tempo');
+const tempoText = document.querySelector('.tempo-text');
+const decreaseTempoBtn = document.querySelector('.decrease-tempo');
+const minus1 = document.querySelector('.minus1');
+const decreaseTempoJumpBtn = document.querySelector('.decrease-tempo-jump');
+const minus10 = document.querySelector('.minus10');
+const increaseTempoJumpBtn = document.querySelector('.increase-tempo-jump');
+const plus1 = document.querySelector('.plus1');
+const increaseTempoBtn = document.querySelector('.increase-tempo');
+const plus10 = document.querySelector('.plus10');
+const tempoSlider = document.querySelector('.slider');
+const startStopBtn = document.querySelector('.start-stop');
+const subtractBeats = document.querySelector('.subtract-beats');
+const addBeats = document.querySelector('.add-beats');
+const measureCount = document.querySelector('.measure-count');
 
 const click1 = new Audio('metronome-click-high.mp3');
 const click2 = new Audio('metronome-click-low.mp3');
 
 let bpm = 140;
+let jump = 10;
 let beatsPerMeasure = 4;
 let count = 0;
 let isRunning = false;
 let tempoTextString = 'Medium';
+// let jumpBackIcon = 'keyboard_double_arrow_left';
+// let jumpForwardIcon = 'keyboard_double_arrow_right';
+// let subtractIcon = 'remove';
+// let addIcon = 'add';
 
 decreaseTempoBtn.addEventListener('click', () => {
-    if (bpm <= 20) { return };
+    if (bpm <= 20) {
+        minus1.textContent = 'dangerous';
+        return;
+        };
     bpm--;
-    validateTempo();
+    plus1.textContent = 'add';
+    validateTempo1();
     updateMetronome();
 });
+decreaseTempoJumpBtn.addEventListener('click', () => {
+    if (bpm <= 20) { return };
+    function decreaseJump() {
+        if (bpm >= 30) {
+        bpm = (bpm - jump);
+        return bpm;
+        } else {
+            minus10.textContent = 'dangerous';
+            return;
+        }
+        }
+    plus10.textContent = 'keyboard_double_arrow_right';
+    decreaseJump();
+    validateTempo10();
+    updateMetronome();
+});
+
 increaseTempoBtn.addEventListener('click', () => {
-    if (bpm >= 280) { return };
+    if (bpm >= 280) {
+        plus1.textContent = 'dangerous'; 
+        return;
+        };
     bpm++;
-    validateTempo();
+    minus1.textContent = 'remove';
+    validateTempo1();
     updateMetronome();
 });
+increaseTempoJumpBtn.addEventListener('click', () => {
+    if (bpm >= 280) { return };
+    function increaseJump() {
+        if (bpm <= 271) {
+        bpm = (bpm + jump);
+        return bpm;
+        } else {
+            plus10.textContent = 'dangerous';
+            return;
+        }
+    }
+    minus10.textContent = 'keyboard_double_arrow_left';
+    increaseJump();
+    validateTempo10();
+    updateMetronome();
+});
+
 tempoSlider.addEventListener('input', () => {
     bpm = tempoSlider.value;
-    validateTempo();
+    validateTempo1();
     updateMetronome();
 });
 
@@ -84,9 +137,27 @@ function updateMetronome() {
 
     tempoText.textContent = tempoTextString;
 }
-function validateTempo() {
-    if (bpm <= 20) { return };
-    if (bpm >= 280) { return };
+function validateTempo1() {
+    if (bpm <= 20) {
+        minus1.textContent = 'dangerous';
+        minus10.textContent = 'dangerous';
+        return;
+        };
+    if (bpm >= 280) {
+        plus1.textContent = 'dangerous';
+        plus10.textContent = 'dangerous';
+        return;
+        };
+}
+function validateTempo10() {
+    if (bpm <= 29) {
+        minus10.textContent = 'dangerous';
+        return;
+        };
+    if (bpm >= 271) {
+        plus10.textContent = 'dangerous';
+        return;
+        };
 }
 
 function playClick() {
@@ -105,3 +176,4 @@ function playClick() {
 }
 
 const metronome = new Timer(playClick, 60000 / bpm, { immediate: true });
+

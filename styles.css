@@ -10,6 +10,19 @@ body {
     color:blue;
     user-select: none;
 }
+
+button {
+    width: 30px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: unset,
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 1,
+  'opsz' 200
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -19,8 +32,8 @@ body {
 .metronome {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     justify-content: space-between;
 }
 .bpm-display {
@@ -44,12 +57,14 @@ body {
 }
 
 .tempo-settings .adjust-tempo-btn {
-    width: 30px;
+    margin: 0.3em;
+    width: 40px;
     height: 30px;
-    font-size: 40px;
+    font-size: 1.5em;
     border-radius: 50%;
     border: 1px solid #ddd;
     text-align: center;
+    vertical-align: middle;
     cursor: pointer;
 }
 
