@@ -10,49 +10,188 @@
     
 </head>
 <body>
-    <div class="container">
-        <div class="metronome">
-
-            <div class="bpm-display">
-                <span class="tempo">140</span>
-                <span class="bpm">BPM</span>
+    <div class="main">
+        <div class="navigation-circle">
+            <div class="navigation-circle__inner">
+            <svg class="navigation-circle-svg navigation-circle-svg--opaque" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320">
+                <circle cx="160" cy="160" r="158" fill="none" stroke-width="1" stroke="#c644fc" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dashoffset: 0; stroke-dasharray: none"></circle>
+            </svg>
+            <svg class="navigation-circle-svg navigation-circle-svg--mask" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320">
+                <circle id="mask-circle" cx="160" cy="160" r="158" fill="none" stroke-width="2" stroke="#c644fc" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dasharray:1005.3088px;"></circle>
+            </svg>
+            <ul class="navigation-circle__list">
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(1)" onmouseenter="calculateOffset(1)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #1
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(2)" onmouseenter="calculateOffset(2)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #2
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(3)" onmouseenter="calculateOffset(3)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #3
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(4)" onmouseenter="calculateOffset(4)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #4
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(5)" onmouseenter="calculateOffset(5)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #5
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(6)" onmouseenter="calculateOffset(6)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #6
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(7)" onmouseenter="calculateOffset(7)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #7
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(8)" onmouseenter="calculateOffset(8)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #8
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(9)" onmouseenter="calculateOffset(9)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #9
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(10)" onmouseenter="calculateOffset(10)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #10
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(11)" onmouseenter="calculateOffset(11)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #11
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(12)" onmouseenter="calculateOffset(12)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #12
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(13)" onmouseenter="calculateOffset(13)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #13
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(14)" onmouseenter="calculateOffset(14)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #14
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(15)" onmouseenter="calculateOffset(15)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #15
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(16)" onmouseenter="calculateOffset(16)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #16
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(17)" onmouseenter="calculateOffset(17)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #17
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(18)" onmouseenter="calculateOffset(18)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #18
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(19)" onmouseenter="calculateOffset(19)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #19
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(20)" onmouseenter="calculateOffset(20)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #20
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+                <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(21)" onmouseenter="calculateOffset(21)" onMouseLeave="onMouseLeave()">
+                    <div class="navigation-circle-list-item__meta">
+                    <h3 class="navigation-circle-list-item__title">Item #21
+                    </h3>
+                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    </div></a></li>
+            </ul>
             </div>
+        </div>
+        <div class="container">
+            <div class="metronome">
 
-            <div class="tempo-text">Nice and steady</div>
-            
-            <div class="tempo-settings">
+                <div class="bpm-display">
+                    <span class="tempo">140</span>
+                    <span class="bpm">BPM</span>
+                </div>
 
-                <button class="adjust-tempo-btn decrease-tempo-jump">
-                    <span class="material-symbols-outlined minus10">
-                        keyboard_double_arrow_left
-                    </span>
-                </button>
-                <button class="adjust-tempo-btn decrease-tempo">
-                    <span class="material-symbols-outlined minus1">remove</span>
-                </button>
-
-                <input type="range" min="20" max="280" step="1" class="slider">
+                <div class="tempo-text">Nice and steady</div>
                 
-                <button class="adjust-tempo-btn increase-tempo">
-                    <span class="material-symbols-outlined plus1">add</span>
-                </button>
-                <button class="adjust-tempo-btn increase-tempo-jump">
-                    <span class="material-symbols-outlined plus10">
-                        keyboard_double_arrow_right
-                    </span>
-                </button>
+                <div class="tempo-settings">
+
+                    <button class="adjust-tempo-btn decrease-tempo-jump">
+                        <span class="material-symbols-outlined minus10">
+                            keyboard_double_arrow_left
+                        </span>
+                    </button>
+                    <button class="adjust-tempo-btn decrease-tempo">
+                        <span class="material-symbols-outlined minus1">remove</span>
+                    </button>
+
+                    <input type="range" min="20" max="280" step="1" class="slider">
+                    
+                    <button class="adjust-tempo-btn increase-tempo">
+                        <span class="material-symbols-outlined plus1">add</span>
+                    </button>
+                    <button class="adjust-tempo-btn increase-tempo-jump">
+                        <span class="material-symbols-outlined plus10">
+                            keyboard_double_arrow_right
+                        </span>
+                    </button>
+                </div>
+                <div class="start-stop">START</div>
+                <div class="measures">
+                    <div class="subtract-beats stepper">-</div>
+                    <div class="measure-count">4</div>
+                    <div class="add-beats stepper">+</div>
+                </div>
+                <span class="beats-per-measure-text">Beats per measure</span>
+            
             </div>
-            <div class="start-stop">START</div>
-            <div class="measures">
-                <div class="subtract-beats stepper">-</div>
-                <div class="measure-count">4</div>
-                <div class="add-beats stepper">+</div>
-            </div>
-            <span class="beats-per-measure-text">Beats per measure</span>
-        
         </div>
     </div>
-
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js" type="module" async defer></script>
 </body>
 </html>
