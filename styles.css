@@ -26,11 +26,11 @@ i.material-symbols-outlined {
   'opsz' 10,
 }
 
-.container {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
 }
 
@@ -39,7 +39,6 @@ i.material-symbols-outlined {
     flex-direction: column;
     width: 42vw;
     height: 42vw;
-    justify-content: space-between;
     vertical-align: middle;
     z-index: 100;
 }
@@ -57,72 +56,21 @@ i.material-symbols-outlined {
     text-align: center;
 }
 
-.tempo-settings {
-    text-align: center;
-}
-
-/* .tempo-settings .adjust-tempo-btn {
-    margin: 0.3vw;
-    width: 3vw;
-    height: 3vw;
-    font-size: 1.5vw;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-} */
-
-/* .tempo-settings .adjust-tempo-btn:hover {
-    background-color: #fa545c;
-    color: #fff;
-} */
-
-/* input[type=range] {
-    -webkit-appearance: none;
-    background-color: transparent;
-    width: 70vw;
-} */
-/* input[type=range]::-webkit-slider-thumb {
-     -webkit-appearance: none;
-}
-input[type=range]:focus {
-     outline: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 1.3vw;
-    height: 1.3vw;
-    border-radius: 50%;
-    background-color: #ff656c;
-    cursor: pointer;
-    margin-top: -.5vw;
-}
-input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
-    width: 1.3vw;
-    height: 1.3vw;
-    border-radius: 50%;
-    background-color: #ff656c;
-    cursor: pointer;
-} */
-
-/* input[type=range]::-webkit-slider-runnable-track {
-    width: 80vw;
-    height: .1vw;
-    background-color: #ddd;
-}
-input[type=range]::-moz-range-track {
-    width: 90vw;
-    height: .3vw;
-    background-color: #ddd;
-} */
-
-#slider {
-  padding: 2vw;
-  width: 42vw;
+.container {
+  display: inline;
   text-align: center;
+}
+.button-groups {
+    display: inline-block;
+    justify-self: center;
+}
+
+
+input[type=range] {
+    position: relative;
+    padding-bottom: 4vw;
+    width: 42vw;
+    text-align: center;
 }
 
 #start-stop {
@@ -141,6 +89,8 @@ input[type=range]::-moz-range-track {
   filter: brightness(120%);
 }
 .measures {
+  margin-left: 20%;
+    margin-right: 20%;
     display: flex;
     justify-content: space-around;
     font-weight: 200;
@@ -170,7 +120,6 @@ input[type=range]::-moz-range-track {
 }
 
 .beats-per-measure-text {
-    margin: 5vw;
     text-align: center;
     font-size: 2.5vw;
     text-transform: uppercase;
