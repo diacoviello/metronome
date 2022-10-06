@@ -11,8 +11,8 @@ body {
     user-select: none;
 }
 
-button {
-  font-family: "Almendra", sans-serif;
+.btn-floating:hover {
+  filter: invert(100%);
 }
 
 i.material-symbols-outlined {
@@ -37,8 +37,8 @@ i.material-symbols-outlined {
 .metronome {
     display: flex;
     flex-direction: column;
-    width: 35vw;
-    height: 35vw;
+    width: 42vw;
+    height: 42vw;
     justify-content: space-between;
     vertical-align: middle;
     z-index: 100;
@@ -58,12 +58,10 @@ i.material-symbols-outlined {
 }
 
 .tempo-settings {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: middle;
+    text-align: center;
 }
 
-.tempo-settings .adjust-tempo-btn {
+/* .tempo-settings .adjust-tempo-btn {
     margin: 0.3vw;
     width: 3vw;
     height: 3vw;
@@ -73,19 +71,19 @@ i.material-symbols-outlined {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-}
+} */
 
-.tempo-settings .adjust-tempo-btn:hover {
+/* .tempo-settings .adjust-tempo-btn:hover {
     background-color: #fa545c;
     color: #fff;
-}
+} */
 
-input[type=range] {
+/* input[type=range] {
     -webkit-appearance: none;
     background-color: transparent;
     width: 70vw;
-}
-input[type=range]::-webkit-slider-thumb {
+} */
+/* input[type=range]::-webkit-slider-thumb {
      -webkit-appearance: none;
 }
 input[type=range]:focus {
@@ -108,9 +106,9 @@ input[type=range]::-moz-range-thumb {
     border-radius: 50%;
     background-color: #ff656c;
     cursor: pointer;
-}
+} */
 
-input[type=range]::-webkit-slider-runnable-track {
+/* input[type=range]::-webkit-slider-runnable-track {
     width: 80vw;
     height: .1vw;
     background-color: #ddd;
@@ -119,26 +117,32 @@ input[type=range]::-moz-range-track {
     width: 90vw;
     height: .3vw;
     background-color: #ddd;
+} */
+
+#slider {
+  padding: 2vw;
+  width: 42vw;
+  text-align: center;
 }
 
-.start-stop {
-    width: 25vw;
-    height: 9vh;
-    font-size: 5vw;
+#start-stop {
+    font-size: 3vw;
+    max-height: 10vw;;
+    justify-content: center;
     text-align: center;
-    background-color: #fa545c;
-    border-radius: 50%;
-    color: white;
-    margin: 3vw auto;
+    margin: auto;
     cursor: pointer;
 }
 
-.start-stop:hover {
-    background: #ff656c;
+.start-stop-btn {
+    text-align: center;
+}
+.start-stop-btn:hover {
+  filter: brightness(120%);
 }
 .measures {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-weight: 200;
 }
 .measures .stepper {

@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./styles.css">
-    <title>Metronome</title>
-    
-</head>
-<body>
-    <div class="container">
-        <div class="metronome">
 
-            <div class="bpm-display">
-                <span class="tempo">140</span>
-                <span class="bpm">BPM</span>
-            </div>
-            <br />
-            <div class="tempo-text">Nice and steady</div>
-            <br />
-            <div class="tempo-settings">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./styles.css">
+        <title>Metronome</title>
 
-                <button class="adjust-tempo-btn decrease-tempo-jump">
-                    <i class="material-symbols-outlined minus10">
-                        keyboard_double_arrow_left
-                    </i>
-                </button>
-                <button class="adjust-tempo-btn decrease-tempo">
-                    <i class="material-symbols-outlined minus1">remove</i>
-                </button>
+    </head>
 
-                <input type="range" min="20" max="280" step="1" class="slider">
-                
-                <button class="adjust-tempo-btn increase-tempo">
-                    <i class="material-symbols-outlined plus1">add</i>
-                </button>
-                <button class="adjust-tempo-btn increase-tempo-jump">
-                    <i class="material-symbols-outlined plus10">
-                        keyboard_double_arrow_right
-                    </i>
-                </button>
+    <body>
+        <div class="container">
+            <div class="metronome">
+
+                <div class="bpm-display">
+                    <span class="tempo">140</span>
+                    <span class="bpm">BPM</span>
+                </div>
+                <br />
+                <div class="tempo-text">Nice and steady</div>
+                <br />
+
+
+                <!-- <button class="adjust-tempo-btn decrease-tempo-jump">
+                        <i class="material-symbols-outlined minus10">
+                            keyboard_double_arrow_left
+                        </i>
+                    </button> -->
+
+                <!-- <button class="adjust-tempo-btn decrease-tempo">
+                        <i class="material-symbols-outlined minus1">remove</i>
+                    </button> -->
+
+
+
+                <form action="#" class="valign-wrapper">
+                    <p class="range-field">
+                        <input type="range" id="slider" min="20" max="280" />
+                    </p>
+                </form>
+
+                <div class="tempo-settings">
+                    <div class="row">
+                        <div class="col s4 offset-s1">
+                            <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" style="font-size: 40px;">replay_10</i></a>
+                            <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" style="font-size: 40px;">remove</i></a>
+                        </div>
+                        <div class="col s4 offset-s2">
+
+                            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo" style="font-size: 40px;">add</i></a>
+
+
+                            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo-jump" style="font-size: 40px;">forward_10</i></a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="start-stop-btn">
+                    <a class="waves-effect waves-light btn-large" id="start-stop">START</a>
+                </div>
+                <br />
+                <div class="measures">
+
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="subtract-beats" onmouseover=><i class="material-icons">remove</i></a>
+                    <span class="measure-count">4</span>
+
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="add-beats"><i class="material-icons">add</i></a>
+
+                </div>
+                <span class="beats-per-measure-text">Beats per measure</span>
+
             </div>
-            <button class="start-stop">START</button>
-            <div class="measures">
-                <button class="subtract-beats stepper">
-                    <i class="material-symbols-outlined">remove</i>
-                </button>
-                <span class="measure-count">4</span>
-                <button class="add-beats stepper">
-                    <i class="material-symbols-outlined">add</i>
-                </button>
-            </div>
-            <span class="beats-per-measure-text">Beats per measure</span>
-        
         </div>
-    </div>
 
-    <script src="./app.js" type="module"></script>
-</body>
+        <script src="./app.js" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+
 </html>
