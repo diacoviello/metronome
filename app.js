@@ -132,7 +132,7 @@ function updateMetronome() {
     if ( bpm>100&&bpm<120 ) { tempoTextString="Allegretto" };
     if ( bpm>120&&bpm<156 ) { tempoTextString="Allegro" };
     if ( bpm>156&&bpm<176 ) { tempoTextString="Vivace" };
-    if ( bpm>176&&bpm<200 ) { tempoTextString="Prest0" };
+    if ( bpm>176&&bpm<200 ) { tempoTextString="Presto" };
     if ( bpm>200&&bpm<=280 ) { tempoTextString="Prestissimo" };
 
     tempoText.textContent=tempoTextString;

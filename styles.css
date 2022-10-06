@@ -11,6 +11,10 @@ body {
     user-select: none;
 }
 
+.btn-large {
+  
+}
+
 .btn-floating:hover {
   filter: invert(100%);
 }
@@ -57,6 +61,7 @@ i.material-symbols-outlined {
 }
 
 .container {
+  display: inline;
   text-align: center;
 }
 .button-groups {
