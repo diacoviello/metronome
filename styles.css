@@ -11,10 +11,6 @@ body {
     user-select: none;
 }
 
-.btn-large {
-  
-}
-
 .btn-floating:hover {
   filter: invert(100%);
 }
@@ -70,10 +66,11 @@ i.material-symbols-outlined {
 }
 
 
-#slider {
-  padding: 2vw;
-  width: 42vw;
-  text-align: center;
+input[type=range] {
+    position: relative;
+    padding-bottom: 4vw;
+    width: 42vw;
+    text-align: center;
 }
 
 #start-stop {
