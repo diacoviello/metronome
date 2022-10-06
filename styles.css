@@ -12,15 +12,18 @@ body {
 }
 
 button {
-    width: 30px;
+  font-family: "Almendra", sans-serif;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: unset,
+i.material-symbols-outlined {
+  vertical-align: middle;
+  align-items: center;
+  font-size: 2vw;
+  font-variation-settings:
   'FILL' 0,
-  'wght' 700,
-  'GRAD' 1,
-  'opsz' 200
+  'wght' 100,
+  'GRAD' 40,
+  'opsz' 10,
 }
 
 .container {
@@ -28,25 +31,28 @@ button {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
+
 .metronome {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 350px;
+    width: 35vw;
+    height: 35vw;
     justify-content: space-between;
+    vertical-align: middle;
+    z-index: 100;
 }
 .bpm-display {
-    width: 100%;
     text-align: center;
     color:indianred;
 }
 .bpm-display .tempo {
-    font-size: 4em;
+    font-size: 7vw;
     font-weight: bold;
 }
 .tempo-text {
-    font-size: .8em;
+    font-size: 2vw;
     text-transform: uppercase;
     text-align: center;
 }
@@ -54,13 +60,14 @@ button {
 .tempo-settings {
     display: flex;
     justify-content: space-between;
+    vertical-align: middle;
 }
 
 .tempo-settings .adjust-tempo-btn {
-    margin: 0.3em;
-    width: 40px;
-    height: 30px;
-    font-size: 1.5em;
+    margin: 0.3vw;
+    width: 3vw;
+    height: 3vw;
+    font-size: 1.5vw;
     border-radius: 50%;
     border: 1px solid #ddd;
     text-align: center;
@@ -72,17 +79,11 @@ button {
     background-color: #fa545c;
     color: #fff;
 }
-.tempo-settings .decrease-tempo {
-    line-height: 25px;
-}
-.tempo-settings .increase-tempo {
-    line-height: 25px;
-}
 
 input[type=range] {
     -webkit-appearance: none;
     background-color: transparent;
-    width: 70%;
+    width: 70vw;
 }
 input[type=range]::-webkit-slider-thumb {
      -webkit-appearance: none;
@@ -93,43 +94,42 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 1.3vw;
+    height: 1.3vw;
     border-radius: 50%;
     background-color: #ff656c;
     cursor: pointer;
-    margin-top: -6px;
+    margin-top: -.5vw;
 }
 input[type=range]::-moz-range-thumb {
     -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 1.3vw;
+    height: 1.3vw;
     border-radius: 50%;
     background-color: #ff656c;
     cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 2px;
+    width: 80vw;
+    height: .1vw;
     background-color: #ddd;
 }
 input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 2px;
+    width: 90vw;
+    height: .3vw;
     background-color: #ddd;
 }
 
 .start-stop {
-    width: 50px;
-    height: 50px;
-    font-size: 0.7em;
+    width: 25vw;
+    height: 9vh;
+    font-size: 5vw;
     text-align: center;
     background-color: #fa545c;
     border-radius: 50%;
     color: white;
-    line-height: 50px;
-    margin: 0 auto;
+    margin: 3vw auto;
     cursor: pointer;
 }
 
@@ -139,10 +139,11 @@ input[type=range]::-moz-range-track {
 .measures {
     display: flex;
     justify-content: center;
+    font-weight: 200;
 }
 .measures .stepper {
-    width: 20px;
-    height: 20px;
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
     border: 1px solid #ddd;
     text-align: center;
@@ -151,14 +152,22 @@ input[type=range]::-moz-range-track {
 }
 .measures .stepper:hover {
     background: #ff656c;
-    color: white;
 }
 .measures .add-beats {
-    list-style: 15px;
+    justify-content: space-between;
+    background-color: white;
+}
+.measures .measure-count {
+  font-size: 4vw;
+}
+.measures .subtract-beats {
+    justify-content: space-between;
+    background-color: white;
 }
 
 .beats-per-measure-text {
+    margin: 5vw;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 2.5vw;
     text-transform: uppercase;
 }
