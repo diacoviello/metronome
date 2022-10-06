@@ -22,9 +22,9 @@
             <ul class="navigation-circle__list">
                 <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(1)" onmouseenter="calculateOffset(1)" onMouseLeave="onMouseLeave()">
                     <div class="navigation-circle-list-item__meta">
-                    <h3 class="navigation-circle-list-item__title">Item #1
+                    <h3 class="navigation-circle-list-item__title">20-40 bpm
                     </h3>
-                    <h4 class="navigation-circle-list-item__subtitle">It just goes round and round</h4>
+                    <h4 class="navigation-circle-list-item__subtitle">Larghissimo / Solenne / Grave</h4>
                     </div></a></li>
                 <li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onclick="onClick(2)" onmouseenter="calculateOffset(2)" onMouseLeave="onMouseLeave()">
                     <div class="navigation-circle-list-item__meta">
@@ -149,7 +149,7 @@
             </ul>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="metronome">
 
                 <div class="bpm-display">
@@ -162,23 +162,23 @@
                 <div class="tempo-settings">
 
                     <button class="adjust-tempo-btn decrease-tempo-jump">
-                        <span class="material-symbols-outlined minus10">
+                        <i class="material-symbols-outlined minus10">
                             keyboard_double_arrow_left
-                        </span>
+                        </i>
                     </button>
                     <button class="adjust-tempo-btn decrease-tempo">
-                        <span class="material-symbols-outlined minus1">remove</span>
+                        <i class="material-symbols-outlined minus1">remove</i>
                     </button>
 
                     <input type="range" min="20" max="280" step="1" class="slider">
                     
                     <button class="adjust-tempo-btn increase-tempo">
-                        <span class="material-symbols-outlined plus1">add</span>
+                        <i class="material-symbols-outlined plus1">add</i>
                     </button>
                     <button class="adjust-tempo-btn increase-tempo-jump">
-                        <span class="material-symbols-outlined plus10">
+                        <i class="material-symbols-outlined plus10">
                             keyboard_double_arrow_right
-                        </span>
+                        </i>
                     </button>
                 </div>
                 <div class="start-stop">START</div>
