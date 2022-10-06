@@ -125,14 +125,15 @@ function updateMetronome() {
     tempoDisplay.textContent=bpm;
     tempoSlider.value=bpm;
     metronome.timeInterval=60000/bpm;
-    if ( bpm<=40 ) { tempoTextString="Super Slow" };
-    if ( bpm>40&&bpm<80 ) { tempoTextString="Slow" };
-    if ( bpm>80&&bpm<120 ) { tempoTextString="Getting there" };
-    if ( bpm>120&&bpm<180 ) { tempoTextString="Nice and Steady" };
-    if ( bpm>180&&bpm<220 ) { tempoTextString="Rock n' Roll" };
-    if ( bpm>220&&bpm<240 ) { tempoTextString="Funky Stuff" };
-    if ( bpm>240&&bpm<260 ) { tempoTextString="Relax Dude" };
-    if ( bpm>260&&bpm<=280 ) { tempoTextString="Eddie Van Halen" };
+    if ( bpm<=40 ) { tempoTextString="Grave" };
+    if ( bpm>40&&bpm<60 ) { tempoTextString="Largo" };
+    if ( bpm>60&&bpm<80 ) { tempoTextString="Adagio" };
+    if ( bpm>80&&bpm<100 ) { tempoTextString="Andante Moderato" };
+    if ( bpm>100&&bpm<120 ) { tempoTextString="Allegretto" };
+    if ( bpm>120&&bpm<156 ) { tempoTextString="Allegro" };
+    if ( bpm>156&&bpm<176 ) { tempoTextString="Vivace" };
+    if ( bpm>176&&bpm<200 ) { tempoTextString="Prest0" };
+    if ( bpm>200&&bpm<=280 ) { tempoTextString="Prestissimo" };
 
     tempoText.textContent=tempoTextString;
 }

@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="main">
             <div class="metronome">
 
                 <div class="bpm-display">
@@ -44,19 +44,18 @@
                     </p>
                 </form>
 
-                <div class="tempo-settings">
-                    <div class="row">
-                        <div class="col s4 offset-s1">
-                            <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" style="font-size: 40px;">replay_10</i></a>
-                            <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" style="font-size: 40px;">remove</i></a>
-                        </div>
-                        <div class="col s4 offset-s2">
+                <div class="container" id="tempo-settings">
+                    <div class="button-groups">
 
-                            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo" style="font-size: 40px;">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" style="font-size: 40px;">replay_10</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" style="font-size: 40px;">remove</i></a>
+                    </div>
+                    <div class="button-groups">
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo" style="font-size: 40px;">add</i></a>
 
 
-                            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo-jump" style="font-size: 40px;">forward_10</i></a>
-                        </div>
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo-jump" style="font-size: 40px;">forward_10</i></a>
+
                     </div>
                 </div>
                 <br />
