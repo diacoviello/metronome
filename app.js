@@ -9,13 +9,13 @@ if ( typeof window!=='undefined' ) {
 const tempoDisplay=document.querySelector( '.tempo' );
 const tempoText=document.querySelector( '.tempo-text' );
 const decreaseTempoBtn=document.querySelector( '#decrease-tempo' );
-const minus1=document.querySelector( '.minus1' );
+const minus1=document.getElementById( 'minus1' );
 const decreaseTempoJumpBtn=document.querySelector( '#decrease-tempo-jump' );
-const minus10=document.querySelector( '.minus10' );
+const minus10=document.getElementById( 'minus10' );
 const increaseTempoJumpBtn=document.querySelector( '#increase-tempo-jump' );
-const plus1=document.querySelector( '.plus1' );
+const plus1=document.getElementById( 'plus1' );
 const increaseTempoBtn=document.querySelector( '#increase-tempo' );
-const plus10=document.querySelector( '.plus10' );
+const plus10=document.getElementById( 'plus10' );
 const tempoSlider=document.querySelector( '#slider' );
 const startStopBtn=document.querySelector( '#start-stop' );
 const subtractBeats=document.querySelector( '#subtract-beats' );
@@ -34,59 +34,55 @@ let tempoTextString='Medium';
 
 decreaseTempoBtn.addEventListener( 'click', () => {
     if ( bpm<=20 ) {
-        // minus1.textContent='dangerous';
         return;
+    } else if ( bpm>=21 ) {
+        plus1.textContent = "remove";
+        plus10.textContent = "replay_10";
+
     };
     bpm--;
-    // plus1.textContent='add';
+    
     validateTempo1();
     updateMetronome();
 } );
 decreaseTempoJumpBtn.addEventListener( 'click', () => {
-    if ( bpm<=20 ) { return };
-    function decreaseJump() {
-        if ( bpm>=30 ) {
-            bpm=( bpm-jump );
-            return bpm;
-        } else {
-            // minus10.textContent='dangerous';
-            return;
-        }
-    }
-    // plus10.textContent='keyboard_double_arrow_right';
-    // plus1.textContent='add';
-    decreaseJump();
-    validateTempo1();
-    updateMetronome();
+    if ( bpm<=29 ) { 
+        return;
+    } else if ( bpm>=20 ) {
+            bpm = (bpm-jump );
+            plus1.textContent = "add";
+            plus10.textContent = "forward_10";
+
+            validateTempo1();
+            updateMetronome();
+    };
+
 } );
 
 increaseTempoBtn.addEventListener( 'click', () => {
     if ( bpm>=280 ) {
-        // plus1.textContent='dangerous';
-        // plus10.textContent='dangerous';
         return;
-    };
+    } else if ( bpm<=279 ) {
+        minus1.textContent = "remove";
+        minus10.textContent = "replay_10";
+    }
     bpm++;
-    // minus1.textContent='remove';
+
     validateTempo1();
     updateMetronome();
 } );
 increaseTempoJumpBtn.addEventListener( 'click', () => {
-    if ( bpm>=280 ) { return };
-    function increaseJump() {
-        if ( bpm<=271 ) {
+    if ( bpm>=280 ) { 
+        return;
+    } else if ( bpm<=271 ) {
             bpm=( bpm+jump );
+            minus10.textContent = "replay_10";
+            minus1.textContent = "remove";
+
+            validateTempo1();
+            updateMetronome();
             return bpm;
-        } else {
-            // plus10.textContent='dangerous';
-            return;
-        }
-    }
-    // minus1.textContent='remove';
-    // minus10.textContent='keyboard_double_arrow_left';
-    increaseJump();
-    validateTempo1();
-    updateMetronome();
+    };
 } );
 
 tempoSlider.addEventListener( 'input', () => {
@@ -133,27 +129,49 @@ function updateMetronome() {
     if ( bpm>120&&bpm<156 ) { tempoTextString="Allegro" };
     if ( bpm>156&&bpm<176 ) { tempoTextString="Vivace" };
     if ( bpm>176&&bpm<200 ) { tempoTextString="Presto" };
-    if ( bpm>200&&bpm<=280 ) { tempoTextString="Prestissimo" };
+    if ( bpm>200&&bpm<=220 ) { tempoTextString="Prestissimo" };
+    if ( bpm>220&&bpm<=280 ) { tempoTextString="Stop Kidding Yourself" };
 
     tempoText.textContent=tempoTextString;
 }
 function validateTempo1() {
-    if ( bpm<=20 ) {
+
+    if (bpm<=20 ) {
         minus1.textContent='dangerous';
         minus10.textContent='dangerous';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
+        return;
+    }
+
+    if ( bpm>=21 && bpm<=29 ) {
+        minus1.textContent='remove';
+        minus10.textContent='dangerous';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
         return;
     };
-    if ( bpm>=280 ) {
+    if ( bpm>=30 && bpm<=270 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
+        return;
+    };
+    if ( bpm>=271 && bpm<=279 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
+        plus1.textContent='add';
+        plus10.textContent='dangerous';
+
+        return;
+    };
+    if ( bpm>=279 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
         plus1.textContent='dangerous';
         plus10.textContent='dangerous';
-        return;
-    };
-    if ( bpm<=29 ) {
-        minus10.textContent='dangerous';
-        return;
-    };
-    if ( bpm>=271 ) {
-        plus10.textContent='dangerous';
+    
         return;
     };
 }

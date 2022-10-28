@@ -51,7 +51,7 @@ i.material-symbols-outlined {
     font-weight: bold;
 }
 .tempo-text {
-    font-size: 2vw;
+    font-size: 3vw;
     text-transform: uppercase;
     text-align: center;
 }
@@ -90,14 +90,12 @@ input[type=range] {
 }
 .measures {
   margin-left: 20%;
-    margin-right: 20%;
-    display: flex;
-    justify-content: space-around;
-    font-weight: 200;
+  margin-right: 20%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 200;
 }
 .measures .stepper {
-    width: 5vw;
-    height: 5vw;
     border-radius: 50%;
     border: 1px solid #ddd;
     text-align: center;
