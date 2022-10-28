@@ -135,39 +135,43 @@ function updateMetronome() {
     tempoText.textContent=tempoTextString;
 }
 function validateTempo1() {
-    // switch (bpm) {
-    //     case bpm<=20:
-    //         minus1.textContent='dangerous';
-    //         minus10.textContent='dangerous';
-    //         break;
-    //     case bpm<=29:
-    //         minus10.textContent='dangerous';
-    //         break;
-    //     case bpm>=280:
-    //         plus1.textContent='dangerous';
-    //         plus10.textContent='dangerous';
-    //         break;
-    //     case bpm>=271:
-    //         plus10.textContent='dangerous';
-    //         break;
-        
-    // };
-    if ( bpm<=20 ) {
+
+    if (bpm<=20 ) {
         minus1.textContent='dangerous';
         minus10.textContent='dangerous';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
+        return;
+    }
+
+    if ( bpm>=21 && bpm<=29 ) {
+        minus1.textContent='remove';
+        minus10.textContent='dangerous';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
         return;
     };
-    if ( bpm>=280 ) {
+    if ( bpm>=30 && bpm<=270 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
+        plus1.textContent='add';
+        plus10.textContent='forward_10';
+        return;
+    };
+    if ( bpm>=271 && bpm<=279 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
+        plus1.textContent='add';
+        plus10.textContent='dangerous';
+
+        return;
+    };
+    if ( bpm>=279 ) {
+        minus1.textContent='remove';
+        minus10.textContent='replay_10';
         plus1.textContent='dangerous';
         plus10.textContent='dangerous';
-        return;
-    };
-    if ( bpm<=29 ) {
-        minus10.textContent='dangerous';
-        return;
-    };
-    if ( bpm>=271 ) {
-        plus10.textContent='dangerous';
+    
         return;
     };
 }
