@@ -1,6 +1,28 @@
 {
-    "type": "module",
-    "dependencies": {
-        "materialize-css": "^1.0.0-rc.2"
-    }
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "basic metronome app in browser",
+  "main": "app.js",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "materialize": "^1.0.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "node": "^19.0.0",
+    "nodejs": "^0.0.0",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diacoviello/metronome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diacoviello/metronome/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/diacoviello/metronome#readme"
 }

@@ -34,15 +34,15 @@
 
                 <div class="container" id="tempo-settings">
                     <div class="button-groups">
-
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" style="font-size: 40px;">replay_10</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" style="font-size: 40px;">remove</i></a>
+                        <a class="pulsing-button" />
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" id="minus10" style="font-size: 40px;">replay_10</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" id="minus1" style="font-size: 40px;">remove</i></a>
                     </div>
                     <div class="button-groups">
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo" style="font-size: 40px;">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="increase-tempo"><i class="material-icons" id="plus1" style="font-size: 40px;">add</i></a>
 
 
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="increase-tempo-jump" style="font-size: 40px;">forward_10</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" id="increase-tempo-jump"><i class="material-icons" id="plus10" style="font-size: 40px;">forward_10</i></a>
 
                     </div>
                 </div>
@@ -66,6 +66,7 @@
         </div>
 
         <script src="./app.js" type="module"></script>
+        <!-- <script src="./timer.js" type="module"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 
