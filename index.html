@@ -32,34 +32,36 @@
                     </p>
                 </form>
 
-                <div class="container" id="tempo-settings" style=""flex>
-                    <div class="button-groups">
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo-jump"><i class="material-icons" id="minus10" style="font-size: 40px;">replay_10</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="decrease-tempo"><i class="material-icons" id="minus1" style="font-size: 40px;">remove</i></a>
+                <div class="button-groups" id="tempo-settings" >
+                    
+                    <div class="duobtn-min">
+                        <button class="tempo-btn" id="decrease-tempo-jump"><i class="material-icons" id="minus10" style="font-size: 40px;">replay_10</i></button>
+                        <button class="tempo-btn" id="decrease-tempo"><i class="material-icons" id="minus1" style="font-size: 40px;">remove</i></button>
                     </div>
-                    <div class="button-groups">
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="increase-tempo"><i class="material-icons" id="plus1" style="font-size: 40px;">add</i></a>
-
-
-                        <a class="btn-floating btn-large waves-effect waves-light red" id="increase-tempo-jump"><i class="material-icons" id="plus10" style="font-size: 40px;">forward_10</i></a>
-
+                    <p>
+                    <div class="duobtn-add">
+                        <button class="tempo-btn" id="increase-tempo"><i class="material-icons" id="plus1" style="font-size: 40px;">add</i></a>
+                        <button class="tempo-btn" id="increase-tempo-jump"><i class="material-icons" id="plus10" style="font-size: 40px;">forward_10</i></a>
                     </div>
+                    
                 </div>
                 <br />
 
-                <div class="start-stop-btn">
-                    <a class="waves-effect waves-light btn-large" id="start-stop">START</a>
+                <div class="start-stop">
+                    <button class="start-stop-btn" id="start-stop">START</button>
                 </div>
                 <br />
                 <div class="measures">
-
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="subtract-beats"><i class="material-icons">remove</i></a>
-                    <span class="measure-count">4</span>
-
-                    <a class="btn-floating btn-large waves-effect waves-light red" id="add-beats"><i class="material-icons">add</i></a>
-
+                    <div class="container">
+                        <div class="row" id="add-rem">
+                            <button class="measure-btn" id="subtract-beats"><i class="material-icons">remove</i></button>
+                            <a class="measure-count"">4</a><a class="measure-count"> /  4</a>
+                            <button class="measure-btn" id="add-beats"><i class="material-icons">add</i></button>
+                        </div>  
+        
+                    </div>
                 </div>
-                <span class="beats-per-measure-text">Beats per measure</span>
+                
 
             </div>
         </div>
