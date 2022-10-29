@@ -5,7 +5,8 @@
     margin: 0;
 }
 
-body {
+html, body {
+  height: 100%;
     font-family: "Almendra", sans-serif;
     color:blue;
     user-select: none;
@@ -27,20 +28,22 @@ i.material-symbols-outlined {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 100vw;
+  display: grid;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  vertical-align: baseline;
+  width: 100vw;
 }
 
 .metronome {
-    display: flex;
-    flex-direction: column;
-    width: 42vw;
-    height: 42vw;
-    vertical-align: middle;
-    z-index: 100;
+  display: flex;
+  border: 10px solid black;
+  flex-direction: column;
+  min-width: 60%;
+  min-height: 70%;
+  vertical-align: middle;
+  z-index: 100;
 }
 .bpm-display {
     text-align: center;
@@ -56,26 +59,76 @@ i.material-symbols-outlined {
     text-align: center;
 }
 
-.container {
-  display: inline;
+/* .container {
+  display: absolute;
+  text-align: center;
+} */
+.button-groups {
+  padding: 1.2vw;
+  display: flex;
+  margin: 0;
+}
+.duobtn-min {
+  display: flex;
+  position: relative;
+  padding-left: 3vw;
+  justify-content: space-evenly;
+  justify-self: start;
+  text-align: center;
+	flex: 50%;
+}
+.duobtn-add {
+  display: flex;
+  padding-right: 3vw;
+  justify-content: space-evenly;
+  justify-self: end;
+  float: inline-end;
+	flex: 50%;
   text-align: center;
 }
-.button-groups {
-    display: inline-block;
-    justify-self: center;
+.tempo-btn {
+  background: rgb(216, 59, 59);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 8);
+  transform: scale(1);
+}
+.tempo-btn:hover {
+	animation: pulse-black 2s infinite;
+}
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 
+.range-field {
+  margin: auto;
+  
+}
 input[type=range] {
-    position: relative;
-    padding-bottom: 4vw;
-    width: 42vw;
-    text-align: center;
+  display: inline-flexbox;
+  position: relative;
+  justify-self: center;
+  padding-bottom: 4vw;
+  width: 35vw;
+  text-align: center;
 }
 
 #start-stop {
+  padding: 1.2vw;
     font-size: 3vw;
-    max-height: 10vw;;
     justify-content: center;
     text-align: center;
     margin: auto;
@@ -83,42 +136,57 @@ input[type=range] {
 }
 
 .start-stop-btn {
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
 .start-stop-btn:hover {
   filter: brightness(120%);
 }
+
 .measures {
-  margin-left: 20%;
-  margin-right: 20%;
-  display: flex;
-  justify-content: space-around;
+  margin-bottom: 20%;
+  display: inline-block;
+text-align: center;
   font-weight: 200;
+  flex-wrap: nowrap;
 }
-.measures .stepper {
-    border-radius: 50%;
-    border: 1px solid #ddd;
+.measures #add-rem {
+  display: inline;
+  margin-bottom: 0;
     text-align: center;
-    margin: 0 5px;
+    vertical-align: top;
     cursor: pointer;
 }
-.measures .stepper:hover {
-    background: #ff656c;
+.measures button:hover {
+  animation: pulse-black 2s infinite;
 }
-.measures .add-beats {
+.measures button {
+  margin: 9px;
+  size-adjust: 80%;
+  border: 1px solid black;
+  border-radius: 50%;
+  vertical-align: middle;
+    background-color: rgb(170, 169, 225);
+}
+.measure-count {
+  font-display: initial;
+  margin-top: -3px;
+  font-size: 6.9vh;
+  flex-direction: row;
+}
+/* #subtract-beats {
+  border-radius: 50%;
     justify-content: space-between;
-    background-color: white;
-}
-.measures .measure-count {
-  font-size: 4vw;
-}
-.measures .subtract-beats {
-    justify-content: space-between;
-    background-color: white;
-}
+    vertical-align: bottom;
+    background-color: rgb(170, 169, 225);
+} */
 
-.beats-per-measure-text {
-    text-align: center;
-    font-size: 2.5vw;
-    text-transform: uppercase;
+#perm {
+  text-align: center;
+  height: 20px;
+  justify-content: center;
+  vertical-align: top;
+  margin-top: -3px;
+  font-weight: 200;
+  flex-direction: row;
 }
